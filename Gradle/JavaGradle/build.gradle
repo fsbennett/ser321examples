@@ -61,9 +61,9 @@ task runFrac(type: JavaExec) {
   
   if (project.hasProperty("denom") && project.hasProperty("num") {
     args(project.getProperty('num'), project.getProperty('denom'));
-  } else if (project.hasProperty("denom") {
+  } else if (project.hasProperty("denom")) {
     args(0, project.getProperty('denom'));
-  } else if (project.hasProperty("num") {
+  } else if (project.hasProperty("num")) {
     args(project.getProperty('num'), 1);
   } else {
     args(1, 1);
